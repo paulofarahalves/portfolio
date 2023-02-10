@@ -64,10 +64,34 @@ h4 {
 	margin-bottom: 30px;
 }
 
+.social-icons {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.social-icons a {
+	height: 50px;
+	width: 50px;
+	margin: 0px 10px;
+	border-radius: 50%;
+	background-color: var(--container-color);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.social-icons a:hover {
+	background-color: var(--main-color);
+	transition: 0.3s all linear;
+}
+
+/* -------------- HEADER -------------- */
+
 header {
 	width: 100%;
 	height: 70px;
-
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -101,6 +125,8 @@ header {
 	background-color: var(--container-color);
 	transition: 0.3s all linear;
 }
+
+/* -------------- HOME -------------- */
 
 #home {
 	color: var(--main-color);
@@ -162,35 +188,14 @@ header {
 	text-decoration: underline;
 }
 
-.social-icons {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-}
-
-.social-icons a {
-	height: 50px;
-	width: 50px;
-	margin: 0px 15px;
-	border-radius: 50%;
-	background-color: var(--container-color);
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.social-icons a:hover {
-	background-color: var(--main-color);
-	transition: 0.3s all linear;
-}
-
 #home .social-icons img {
 	width: 24px;
 	height: 24px;
 	border-radius: 0;
 	margin: auto;
 }
+
+/* -------------- ABOUT -------------- */
 
 .about,
 .experience {
@@ -239,6 +244,8 @@ header {
 	text-align: justify;
 }
 
+/* -------------- EXPERIENCE -------------- */
+
 #experience .experience .left-side .experience-list {
 	border-right: 1px solid var(--main-color);
 }
@@ -262,12 +269,18 @@ header {
 	color: var(--main-color);
 }
 
-li::before {
+.experience-list li a:hover {
+	text-decoration: underline;
+}
+
+.experience li::before {
 	content: '\00BB';
 	color: var(--main-color);
 	margin-right: 10px;
 	font-size: 20px;
 }
+
+/* -------------- KNOWLEDGE -------------- */
 
 .knowledge {
 	display: flex;
@@ -313,6 +326,8 @@ li::before {
 	width: 50px;
 	height: auto;
 }
+
+/* -------------- PORTFOLIO -------------- */
 
 .portfolio {
 	display: grid;
@@ -382,6 +397,8 @@ li::before {
 	transition: 0.3s all linear;
 }
 
+/* -------------- CONTACT -------------- */
+
 .contact {
 	display: flex;
 	flex-direction: column;
@@ -394,15 +411,17 @@ li::before {
 	flex-direction: column;
 	align-items: flex-start;
 	justify-content: center;
+	width: 400px;
 }
 
-.contact-form-field,
+.contact-form-name,
+.contact-form-email,
 .contact-form-message {
 	background-color: var(--container-color);
 	border: none;
 	border-radius: 10px;
 	height: 50px;
-	width: 400px;
+	width: inherit;
 	margin-bottom: 10px;
 	padding: 20px;
 	color: var(--bg-color);
@@ -429,6 +448,85 @@ li::before {
 	transition: 0.3s all linear;
 }
 
+/* -------------- FOOTER -------------- */
+
 footer {
-	padding-bottom: 50px;
+	padding-bottom: 30px;
+}
+
+footer .social-icons {
+	margin-bottom: 30px;
+}
+
+footer h4 {
+	color: var(--bg-color);
+}
+
+footer a {
+	color: var(--main-color);
+}
+
+footer a:hover {
+	text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+	header {
+		display: none;
+	}
+	.portfolio {
+		grid-template-columns: repeat(1, 1fr);
+	}
+}
+
+@media (min-width: 375px) and (max-width: 768px) {
+	.section-title {
+		font-size: 50px;
+		font-weight: 700;
+	}
+
+	.about,
+	.experience {
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+		gap: 30px;
+	}
+
+	.about .left-side,
+	.about .right-side {
+		align-items: center;
+		text-align: center;
+	}
+
+	.about .left-side {
+		margin-bottom: 30px;
+	}
+	#experience .experience .left-side .experience-list {
+		border-right: none;
+	}
+
+	#experience h4 {
+		text-align: center;
+	}
+
+	.experience-list {
+		padding-right: 0;
+	}
+
+	.knowledge .tech-top {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.knowledge .tech-bottom {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.portfolio .project {
+		height: 250px;
+		width: 250px;
+	}
+
+	.contact form {
+		width: 300px;
+	}
 }
