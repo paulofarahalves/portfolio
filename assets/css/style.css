@@ -470,18 +470,13 @@ footer a:hover {
 	text-decoration: underline;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 320px) and (max-width: 768px) {
 	header {
 		display: none;
 	}
-	.portfolio {
-		grid-template-columns: repeat(1, 1fr);
-	}
-}
 
-@media (max-width: 767px) {
 	.section-title {
-		font-size: 50px;
+		font-size: 40px;
 		font-weight: 700;
 	}
 
@@ -521,12 +516,16 @@ footer a:hover {
 		grid-template-columns: repeat(2, 1fr);
 	}
 
+	.portfolio {
+		grid-template-columns: repeat(1, 1fr);
+	}
+
 	.portfolio .project {
 		height: 250px;
 		width: 250px;
 	}
 
 	.contact form {
-		width: 300px;
+		width: 250px;
 	}
 }
