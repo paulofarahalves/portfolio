@@ -1,3 +1,4 @@
+/*
 function alertSubmit(e) {
 	e.preventDefault();
 	alert('Your message was successfully sent!');
@@ -6,3 +7,4 @@ function alertSubmit(e) {
 
 const form = document.querySelector('form');
 form.addEventListener('submit', alertSubmit);
+*/
