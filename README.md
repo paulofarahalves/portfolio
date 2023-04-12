@@ -1,4 +1,6 @@
-My personal portfolio website
+# My personal portfolio website
+
+### Usage
 
 https://paulofarahalves.github.io/portfolio/
 
