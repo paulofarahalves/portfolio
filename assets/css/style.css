@@ -26,6 +26,13 @@ body {
 	background-color: var(--body-color);
 }
 
+#page-area {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
 a {
 	text-decoration: none;
 	color: inherit;
@@ -233,6 +240,10 @@ header {
 	margin-bottom: 20px;
 }
 
+.about .left-side h2 {
+	line-height: 40px;
+}
+
 .about .left-side a {
 	background-color: var(--main-color);
 	font-size: 15px;
@@ -426,7 +437,7 @@ header {
 .contact form {
 	display: flex;
 	flex-direction: column;
-	align-items: flex-start;
+	align-items: center;
 	justify-content: center;
 	width: 400px;
 }
@@ -579,5 +590,9 @@ footer a:hover {
 
 	.contact form {
 		width: 250px;
+	}
+
+	.contact-form-btn {
+		width: 100%;
 	}
 }
